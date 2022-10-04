@@ -33,8 +33,10 @@ const readFromFilePromise = (file) => {
 	return new Promise((resolve, reject) => {
 		fs.readFile(file, `utf8`, (err, data) => {
 			if (err) reject(console.error(err));
-
-			resolve(data);
+			else {
+				const parsedData = JSON.parse(data);
+				resolve(res.json(parsedData));
+			}
 		});
 	});
 };
