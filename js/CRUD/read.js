@@ -40,4 +40,4 @@ const readFromFilePromise = (file) => {
 		});
 	});
 };
-readFromFilePromise.then();
+readFromFilePromise.then((data) => console.log(data));
