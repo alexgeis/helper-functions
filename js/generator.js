@@ -2,6 +2,8 @@
 // function using asynchronous results should be able to pause while waiting for results
 // DO NOT USE IN PRODUCTION
 
+const { getEnvironmentData } = require("worker_threads");
+
 // pass in anonymous function of generator
 asyncIterate(function* () {
 	try {
@@ -36,3 +38,16 @@ function asyncIterate(generator) {
 		iterator.throw(error);
 	}
 }
+
+// using ES6 async/await
+
+(async function () {
+	try {
+		const data1 = await getData("data/data1.json");
+		const data2 = await getData("data/data2.json");
+
+		console.log(data1, data2);
+	} catch (error) {
+		console.error(error);
+	}
+})();
