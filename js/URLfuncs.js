@@ -23,3 +23,20 @@ const getURLParameters = (url) =>
 getURLParameters("google.com"); // {}
 getURLParameters("http://url.com/page?name=Adam&surname=Smith");
 // {name: 'Adam', surname: 'Smith'}
+
+// URL object
+const url = new URL("https://example.com/login?user=someguy&page=news");
+
+url.origin;
+// "https://example.com"
+url.host;
+// "example.com"
+url.protocol;
+// "https:"
+url.pathname;
+// "/login"
+url.searchParams.get("user");
+// "someguy"
+
+// INTL object
+const { locale, timeZone } = Intl.DateTimeFormat().resolvedOptions();
