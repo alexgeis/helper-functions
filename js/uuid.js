@@ -19,7 +19,6 @@ const UUIDGeneratorBrowser = () =>
 
 UUIDGeneratorBrowser(); // '7982fcfe-5721-4632-bede-
 
-
 // solution 3
 crypto.randomUUID();
-> '41c43cfa-e5d9-4053-bb10-123357d580d4'
+// '41c43cfa-e5d9-4053-bb10-123357d580d4'
