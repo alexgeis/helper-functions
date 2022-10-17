@@ -12,4 +12,6 @@ VALUES
     ( 2, "orange"),
     ( 3, "banana");
     
-    
+-- Insert default values
+--If both the column list and the VALUES list are empty, INSERT creates a row with each column set to its default value:
+INSERT INTO tbl_name () VALUES();
