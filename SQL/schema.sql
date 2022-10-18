@@ -12,7 +12,7 @@ USE example_db;
 -- Creates the table "produce" within example_db --
 CREATE TABLE table_name (
   -- INT = Creates a numeric column called "id"
-  id INT NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
   id_2 DECIMAL NOT NULL, -- also FIXED or DEC
   -- VARCHAR(X) = string up to X characters, creates a column called "name"
   -- TEXT = open-ended text area
